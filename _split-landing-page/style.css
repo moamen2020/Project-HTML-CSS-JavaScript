@@ -124,3 +124,20 @@ h1 {
 .hover-right .left {
   width: var(--other-width);
 }
+
+
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .btn {
+    position: absolute;
+    top: 42%;
+    width: 150px;
+    padding: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

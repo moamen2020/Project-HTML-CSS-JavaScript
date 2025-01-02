@@ -11,7 +11,8 @@ sounds.forEach((sound) => {
 
   btn.addEventListener("click", () => {
     soundPlayer.stop();
-    document.getElementById(sound).play();
+    // document.getElementById(sound).play();
+    soundPlayer.play(sound);
   });
 });
 
@@ -23,6 +24,10 @@ const soundPlayer = {
       song.pause();
       song.currentTime = 0;
     });
+  },
+
+  play(sound) {
+    document.getElementById(sound).play();
   },
 };
 

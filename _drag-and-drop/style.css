@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #272424;
+  overflow: hidden;
+}
+
+.empty {
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  border: solid 3px black;
+  background: white;
+}
+
+
+.fill {
+  background-image: url('./ps.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.hovered {
+  background-color: #333;
+  border-color: white;
+  border-style: dashed;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}

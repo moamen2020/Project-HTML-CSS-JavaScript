@@ -1,6 +1,6 @@
-const toggleButton = document.getElementById("toggle");
-const closeButton = document.getElementById("close");
-const openButton = document.getElementById("open");
+const toggle = document.getElementById("toggle");
+const close = document.getElementById("close");
+const open = document.getElementById("open");
 const modal = document.getElementById("modal");
 const navbar = document.getElementById("navbar");
 
@@ -8,8 +8,8 @@ const navbar = document.getElementById("navbar");
 function closeNavbar(e) {
   if (
     document.body.classList.contains("show-nav") &&
-    e.target !== toggleButton &&
-    !toggleButton.contains(e.target) &&
+    e.target !== toggle &&
+    !toggle.contains(e.target) &&
     e.target !== navbar &&
     !navbar.contains(e.target)
   ) {
@@ -21,18 +21,18 @@ function closeNavbar(e) {
 }
 
 // Show nav
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("show-nav");
-  document.body.addEventListener("click", closeNavbar);
-});
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("show-nav");
+    document.body.addEventListener("click", closeNavbar);
+  });
+}
 
-// Show modal
-openButton.addEventListener("click", () => modal.classList.add("show-modal"));
+//
+open.addEventListener("click", () => modal.classList.add("show-modal"));
 
 // Hide modal
-closeButton.addEventListener("click", () =>
-  modal.classList.remove("show-modal")
-);
+close.addEventListener("click", () => modal.classList.remove("show-modal"));
 
 // Hide modal on outside click
 window.addEventListener("click", (e) =>
